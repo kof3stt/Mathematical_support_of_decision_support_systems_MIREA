@@ -178,7 +178,7 @@ def fitness_function(x1: float, x2: float) -> float:
 
 
 if __name__ == '__main__':
-    optimizer = NelderMeadMethod(fitness_function, x0=[0, 0], edge_length=0.75, beta=1.85, gamma=0.1, epsilon=0.0001)
+    optimizer = NelderMeadMethod(fitness_function, x0=[1, 1], edge_length=0.75, beta=1.85, gamma=0.1, epsilon=0.0001)
     minimum = optimizer.optimize()
     print("Найденный минимум:", minimum)
     print("Значение функции в минимуме:", fitness_function(*minimum))
