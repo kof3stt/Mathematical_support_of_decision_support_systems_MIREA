@@ -127,7 +127,7 @@ def fitness_function(x1: float, x2: float) -> float:
 
 
 if __name__ == '__main__':
-    optimizer = HookeJeevesMethod(fitness_function, x0 = [1, 1], h = 0.2, d = 2, m = 2, epsilon = 0.1)
+    optimizer = HookeJeevesMethod(fitness_function, x0 = [1, 1], h = 0.2, d = 2, m = 2, epsilon = 0.0001)
     minimum = optimizer.optimize()
     print("Найденный минимум:", minimum)
     print("Значение функции в минимуме:", fitness_function(*minimum))
