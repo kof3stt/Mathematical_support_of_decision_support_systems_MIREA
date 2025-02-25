@@ -105,8 +105,8 @@ class RapidGradientDescent:
             if self._check_stopping_condition(gradient):
                 break
 
-            hessian = self._compute_hessian(x)  # Вычисляем матрицу Гессе
-            h_k = self._compute_step(gradient, hessian)  # Вычисляем шаг h_k
+            hessian = self._compute_hessian(x)
+            h_k = self._compute_step(gradient, hessian)
 
             x_new = [x[i] - h_k * gradient[i] for i in range(self.n)]
             f_new = self.func(*x_new)
